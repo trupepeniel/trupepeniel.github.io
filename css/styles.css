@@ -1124,8 +1124,41 @@ h3,
 /* ---------- Close / footer ---------- */
 
 .close {
+  position: relative;
   text-align: center;
   padding: 120px 0 100px;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.close .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.close__photo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -22%;
+  height: 144%;
+  z-index: -1;
+  background-image: url("../assets/fotos/escuta.jpg");
+  background-size: cover;
+  background-position: center 40%;
+  will-change: transform;
+}
+
+.close__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.78) 50%,
+    rgba(0, 0, 0, 0.86) 100%
+  );
 }
 
 .close .h1 {
@@ -1306,10 +1339,24 @@ h3,
   top: -22%;
   height: 144%;
   z-index: -1;
-  background-image: url("../assets/fotos/hero.jpg");
   background-size: cover;
   background-position: center 42%;
   will-change: transform;
+}
+
+.photo-break--igreja .photo-break__img {
+  background-image: url("../assets/fotos/igreja.jpg");
+  background-position: center 38%;
+}
+
+.photo-break--hospital .photo-break__img {
+  background-image: url("../assets/fotos/hospital.jpg");
+  background-position: center 45%;
+}
+
+.photo-break--cta .photo-break__img {
+  background-image: url("../assets/fotos/convite.jpg");
+  background-position: center 55%;
 }
 
 .photo-break__img::after {
@@ -1633,7 +1680,8 @@ h3,
   }
 
   .hero__photo,
-  .photo-break__img {
+  .photo-break__img,
+  .close__photo {
     top: 0;
     height: 100%;
     transform: none !important;
