@@ -138,6 +138,21 @@
     });
   });
 
+  var photo = document.querySelector("[data-parallax]");
+  if (photo && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        photo.style.transform = "translate3d(0," + window.scrollY * 0.28 + "px,0)";
+        ticking = false;
+      });
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
   const lightbox = document.querySelector(".lightbox");
   const lightboxSlot = document.querySelector(".lightbox [data-lightbox-caption]");
   if (lightbox) {
