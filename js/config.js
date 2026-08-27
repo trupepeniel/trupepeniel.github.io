@@ -9,7 +9,7 @@
 window.TRUPE_CONFIG = {
   /* WhatsApp com DDI + DDD + número, só números.
      Exemplo de São Paulo: "5511999999999" */
-  whatsapp: "",
+  whatsapp: "5548988338297",
 
   /* Links completos, começando com https:// */
   instagram: "",
