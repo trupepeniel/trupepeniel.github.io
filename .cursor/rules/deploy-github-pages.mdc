@@ -1,0 +1,21 @@
+---
+description: Sempre publicar no GitHub Pages depois de alterar o site
+alwaysApply: true
+---
+
+# Deploy automático
+
+Depois de qualquer alteração na landing page, publique no GitHub Pages **na mesma sessão**, sem esperar a usuária pedir.
+
+## O que fazer
+
+1. Salvar os arquivos locais.
+2. `git add` só o que mudou (não commitar segredos).
+3. Commit com mensagem curta em português.
+4. `git pull --rebase origin main` se o remoto estiver na frente.
+5. `git push origin main` (nunca `--force`).
+6. Confirmar que o site vivo é **https://trupepeniel.github.io/**
+
+Remote: `https://github.com/trupepeniel/trupepeniel.github.io.git`
+
+Se o push falhar por login, abrir a janela de autenticação do Git e avisar a usuária para entrar na conta **mel1953**. Não deixar a atualização só no computador.
