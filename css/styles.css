@@ -1345,12 +1345,12 @@ h3,
 }
 
 .photo-break--igreja .photo-break__img {
-  background-image: url("../assets/fotos/igreja.jpg");
+  background-image: url("../assets/fotos/igreja.jpg?v=2");
   background-position: center 38%;
 }
 
 .photo-break--hospital .photo-break__img {
-  background-image: url("../assets/fotos/hospital.jpg");
+  background-image: url("../assets/fotos/hospital.jpg?v=2");
   background-position: center 45%;
 }
 
